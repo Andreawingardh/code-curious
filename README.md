@@ -54,6 +54,8 @@ Set up the following tables in your Supabase project:
 
 #### `lessons` Table
 
+
+
 | Column Name | Type  | Notes                                                 |
 | ----------- | ----- | ----------------------------------------------------- |
 | id          | int8  | Primary key, auto-incrementing                        |
@@ -63,6 +65,8 @@ Set up the following tables in your Supabase project:
 | next_lesson | text  | Used to display link                                  |
 | snapshot    | jsonb | Holds any default code to be displayed in Editor      |
 | scene       | text  | Holds any default bodies to be displayed in Playfield |
+
+Please refer to `DATABASE.md` for more detailed `lessons` table example.
 
 #### `snapshots` Table
 
