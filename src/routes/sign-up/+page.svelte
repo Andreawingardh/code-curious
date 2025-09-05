@@ -68,6 +68,10 @@
 					<button type="submit" class="btn bg-primary-700">Sign Up</button>
 				</div>
 			</form>
+						<hr class="opacity-50 my-4" />
+			<footer>
+				Already have an account? <a href="/sign-in" class="anchor">Sign in</a>
+			</footer>
 		</section>
 		{#if errorMsg}
 			<hr class="opacity-50 mb-4" />
