@@ -25,14 +25,9 @@
 		<header class="card-header"><h2 class="text-4xl md:text-6xl">Curious about Code?</h2></header>
 		<hr class="opacity-50 my-2" />
 		<section class="p-4 text-sm lg:text-lg">
-			You've come to the right place! <strong>Code Curious</strong> is your interactive resource for
-			learning the basics of programming—in a fun and friendly environment.
-		</section>
-		<hr class="opacity-50 my-2" />
-		<section class="p-4 text-sm lg:text-lg flex flex-col items-start">
-			<h3 class="text-xl">Keeping It Casual?</h3>
-			<p class="mt-2 mb-4">No problem! You can access all beginner lessons without an account.</p>
-			<a href="/tutorial/welcome" class="btn bg-primary-700 flex gap-2"
+			<p class="mt-2 mb-4">You've come to the right place! <strong>Code Curious</strong> is your interactive resource for
+			learning the basics of programming—in a fun and friendly environment.</p>
+			<a href="/tutorial/welcome" class="btn bg-primary-700 flex gap-2 w-md"
 				><FontAwesomeIcon icon={faArrowRight} />Start Learning</a
 			>
 		</section>
@@ -48,9 +43,8 @@
 			>
 		</section>
 		<hr class="opacity-50 my-2" />
-		<section class="p-4 text-sm lg:text-lg flex flex-col items-start">
-			<h3 class="text-xl">Already Have an Account?</h3>
-			<p class="mt-2 mb-4">What are you waiting for?</p>
+		<section class="p-4 text-sm lg:text-lg flex flex-row gap-3 items-start">
+			<p class="mt-2 mb-4">Already have an account?</p>
 			<a href="/sign-in" class="btn bg-primary-700 flex gap-2"
 				><FontAwesomeIcon icon={faArrowRight} />Sign In</a
 			>
