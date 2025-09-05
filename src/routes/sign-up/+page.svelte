@@ -3,7 +3,9 @@
 	import { goto } from '$app/navigation';
 
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
-	import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
+	import { faExclamationTriangle, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+	
+	
 
 	let email = '';
 	let password = '';
@@ -28,7 +30,11 @@
 
 <div class="h-full w-full flex justify-center">
 	<div class="card mt-4 md:mt-12 max-w-96 md:w-96">
-		<header class="card-header">
+		<header class="card-header flex items-center gap-3">
+			
+			<button type="button" class="btn bg-primary-700 p-2" on:click={() => history.back()}>
+				<FontAwesomeIcon icon={faArrowLeft} />
+			</button>
 			<h2 class="h2">Sign Up</h2>
 		</header>
 		<hr class="opacity-50 mt-2" />
