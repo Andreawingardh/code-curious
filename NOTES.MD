@@ -1,6 +1,6 @@
 ## NOTES
 
-[] Finns ingen “gå tillbakaknapp” om man ska signa upp.   Det borde finnas ett alternativ att signa in på sign up sidan. 
+- Finns ingen “gå tillbakaknapp” om man ska signa upp.   Det borde finnas ett alternativ att signa in på sign up sidan. 
 - Om man inte är inloggad när man startar “spelet” så kanske man kan skickas till en mellansida som promptar en att signa upp. Men går att skippa.  
 - otydligt att sign upen har registrerats.   
 - påbörjad uppdatering av användarnamn får du inte ett popup att du är säker på att gå ur.  
