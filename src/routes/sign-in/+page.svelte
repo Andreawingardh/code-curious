@@ -8,6 +8,7 @@
 	let email = '';
 	let password = '';
 	let errorMsg = '';
+	let href = '/sign-up'
 
 	async function handleSignIn() {
 		const error = await signIn(email, password);
@@ -66,7 +67,7 @@
 			</form>
 			<hr class="opacity-50 my-4" />
 			<footer>
-				Don't have an account? <a href="/sign-up" class="anchor">Sign up</a>
+				Don't have an account? <a {href} class="anchor">Sign up</a>
 			</footer>
 		</section>
 	</div>
