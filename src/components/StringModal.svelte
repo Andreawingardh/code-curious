@@ -192,7 +192,7 @@
 				</div>
 			</div>
 			{#if openDeleteConfirmationModal}
-				<DeleteConfirmationModal bind:deleteConfirmation bind:isOpen />
+				<DeleteConfirmationModal bind:deleteConfirmation bind:isOpen = {openDeleteConfirmationModal} />
 			{/if}
 
 			{#if errorMsg !== ''}
