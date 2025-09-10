@@ -14,6 +14,7 @@
 
 	import { checkIfDeletable } from '$lib/utils/checkIfDeletable';
 	import { colors } from '$lib/utils/colors';
+	import DeleteConfirmationModal from './DeleteConfirmationModal.svelte';
 
 	export let editMode: boolean;
 	export let isOpen: boolean;
@@ -21,6 +22,8 @@
 	let variable: StringVariable;
 	let showColorPicker: boolean = false;
 	let errorMsg: string = '';
+	let deleteConfirmation: boolean = false;
+	let openDeleteConfirmationModal: boolean = false;
 
 	// Snapshot store
 	$: _snapshot = $snapshot;
@@ -47,6 +50,7 @@
 
 	const deleteVariable = () => {
 		// Check if variable is deletable
+
 		if (!checkIfDeletable(variable.id)) {
 			errorMsg = 'This variable is being used in another code block';
 			return;
@@ -54,6 +58,15 @@
 		$snapshot = _snapshot.filter((v) => v.id !== variable.id);
 		dispatch('close');
 	};
+
+	$: if (deleteConfirmation) {
+		deleteVariable();
+		console.log('Delete has been confirmed');
+
+		// Reset the confirmation and close modal
+		deleteConfirmation = false;
+		openDeleteConfirmationModal = false;
+	}
 
 	const onSave = () => {
 		// Add default name and or value, if empty
@@ -161,7 +174,9 @@
 				{#if editMode}
 					<button
 						type="button"
-						on:click={deleteVariable}
+						on:click={() => {
+							openDeleteConfirmationModal = true;
+						}}
 						class="btn btn-sm bg-primary-700 flex gap-2"
 					>
 						<FontAwesomeIcon icon={faTrash} /> Delete
@@ -176,6 +191,10 @@
 					</button>
 				</div>
 			</div>
+			{#if openDeleteConfirmationModal}
+				<DeleteConfirmationModal bind:deleteConfirmation bind:isOpen />
+			{/if}
+
 			{#if errorMsg !== ''}
 				<aside class="alert variant-ghost-error mt-4">
 					<p class="flex gap-4 items-center text-sm sm:text-lg">
