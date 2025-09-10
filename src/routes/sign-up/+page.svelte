@@ -11,6 +11,7 @@
 	let password = '';
 	let confirmPassword = '';
 	let errorMsg = '';
+	let href = '/sign-in'
 
 	async function handleRegister() {
 		// Check if passwords match
@@ -76,7 +77,7 @@
 			</form>
 						<hr class="opacity-50 my-4" />
 			<footer>
-				Already have an account? <a href="/sign-in" class="anchor">Sign in</a>
+				Already have an account? <a {href} class="anchor">Sign in</a>
 			</footer>
 		</section>
 		{#if errorMsg}
