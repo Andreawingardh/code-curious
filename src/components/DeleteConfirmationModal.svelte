@@ -14,11 +14,14 @@
 </script>
 
 <Modal {isOpen} on:close={closeModal}>
-	<div slot="header" class="card-header flex justify-between items-start">
+	<div slot="header" class="card-header flex justify-center items-center gap-4">
 		<div class="flex flex-col">TIME FOR DELETE</div>
         <button on:click={() => {deleteConfirmation = true}}>Delete</button>
 		<button on:click={() => {isOpen = false}}>Cancel</button>
-		
- 
-	</div></Modal
->
+	</div>
+</Modal>
+
+
+
+
+
